@@ -27,7 +27,7 @@ namespace Proxier.Core
         public bool HasAuthentication => !string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(Password);
 
         /// <summary>
-        /// Default Proxy.
+        /// Default Proxy (TOR).
         /// </summary>
         /// <returns></returns>
         public static ProxyServer BuildDefault()
@@ -35,7 +35,7 @@ namespace Proxier.Core
             return new ProxyServer()
             {
                 IPAddress = "127.0.0.1",
-                Port = "9150,
+                Port = "9150",
                 ProxyType = ProxyType.Http,
                 Username = "",
                 Password = "",
